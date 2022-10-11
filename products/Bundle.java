@@ -17,25 +17,23 @@ public class Bundle implements Item {
 
   public void add(Item item) {
     items.add(item);
+    Price += item.getPrice();
   }
+
+  public double Price = 0;
 
   @Override
   public double getPrice() {
-    double price = 0;
-    for (Item item : items)
-      price += item.getPrice();
-    return price;
+    return Price;
   }
 
   @Override
   public String toString() {
     String description = "Bundle: ";
     for (int i = 0; i < items.size(); i++) {
-      if (i > 0)
-        description += ", ";
-      description += items.get(i).toString();
+      description += (items.get(i).toString() + ", ");
     }
-    return description;
+    return description.substring(0, description.length() - 2);
   }
 
   public void accept(ItemVisitor visitor) {
