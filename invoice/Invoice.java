@@ -69,8 +69,11 @@ public class Invoice {
 
   public void accept(ItemVisitor visitor) {
     Iterator<Item> iter = getItems();
-    while (iter.hasNext())
+    for(int i=0;i< items.size();i++){
       iter.next().accept(visitor);
+    }
+   // while (iter.hasNext())
+     // iter.next().accept(visitor);
   }
 
   private ArrayList<Item> items;
