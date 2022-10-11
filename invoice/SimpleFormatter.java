@@ -13,11 +13,13 @@ public class SimpleFormatter implements InvoiceFormatter {
   }
 
   public String formatItem(Item item) {
-    return (String.format("%s: %.2f\n", item.toString(), item.getPrice()));
+    //return (String.format("%s: %.2f\n", item.toString(), item.getPrice()));
+    return item.toString() + ": "+ Math.round(item.getPrice() * 100.0) / 100.0 + "\n";
   }
 
   public String formatFooter() {
-    return (String.format("\n\nTOTAL DUE: €%,.2f\n", totalPrice));
+    return "n\\nTOTAL DUE: €" + Math.round(totalPrice * 100.0) / 100.0 + "\n";
+    //return (String.format("\n\nTOTAL DUE: €%,.2f\n", totalPrice));
   }
   
   public void setTotalPrice(double totalPrice) {
