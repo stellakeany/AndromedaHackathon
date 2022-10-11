@@ -18,7 +18,7 @@ public class SimpleFormatter implements InvoiceFormatter {
   }
 
   public String formatFooter() {
-    return "n\\nTOTAL DUE: €" + Math.round(totalPrice * 100.0) / 100.0 + "\n";
+    return "\n\nTOTAL DUE: €" + Math.round(totalPrice * 100.0) / 100.0 + "\n";
     //return (String.format("\n\nTOTAL DUE: €%,.2f\n", totalPrice));
   }
   
