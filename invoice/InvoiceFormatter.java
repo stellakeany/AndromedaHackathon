@@ -18,6 +18,6 @@ public interface InvoiceFormatter {
   String formatFooter();
 
  // set the total invoice price Redundant?? liam
-  public void setTotalPrice(double totalPrice);
+  //public void setTotalPrice(double totalPrice);
 
 }

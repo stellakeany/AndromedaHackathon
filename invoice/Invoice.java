@@ -45,9 +45,8 @@ public class Invoice {
 
   public String format(InvoiceFormatter formatter) {
     String formattedInvoice = formatter.formatHeader();
-    Iterator<Item> iter = getItems();
     for(int i =0; i< items.size(); i++){
-      formattedInvoice += formatter.formatItem(iter.next());
+      formattedInvoice += formatter.formatItem(items.get(i));
     }
     //PriceCalculator calculator = new PriceCalculator();
     //while (iter.hasNext()) {
@@ -61,9 +60,8 @@ public class Invoice {
   }
 
   public void accept(ItemVisitor visitor) {
-    Iterator<Item> iter = getItems();
     for(int i=0;i< items.size();i++){
-      iter.next().accept(visitor);
+      items.get(i).accept(visitor);
     }
    // while (iter.hasNext())
      // iter.next().accept(visitor);
