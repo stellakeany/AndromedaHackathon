@@ -17,9 +17,7 @@ public class Invoice {
     items = new ArrayList<Item>();
   }
   
-  public Invoice(ArrayList<Item> initialItems) {
-    items = initialItems;
-  }
+  //public Invoice(ArrayList<Item> initialItems) {items = initialItems;}
   
   public void addItem(Item item) {
     items.add(item);
@@ -48,12 +46,12 @@ public class Invoice {
   public String format(InvoiceFormatter formatter) {
     String formattedInvoice = formatter.formatHeader();
     Iterator<Item> iter = getItems();
-    PriceCalculator calculator = new PriceCalculator();
+    //PriceCalculator calculator = new PriceCalculator();
     while (iter.hasNext()) {
-      Item item = iter.next();
-      formattedInvoice += formatter.formatItem(item);
-      accept(calculator);
-      formatter.setTotalPrice(calculator.getTotalPrice());
+      //Item item = iter.next();
+      formattedInvoice += formatter.formatItem(iter.next());
+      //accept(calculator);
+      //formatter.setTotalPrice(calculator.getTotalPrice());
     }
     formattedInvoice += formatter.formatFooter();
     return formattedInvoice;

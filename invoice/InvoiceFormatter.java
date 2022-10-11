@@ -17,7 +17,7 @@ public interface InvoiceFormatter {
  // Format the footer of the invoice.
   String formatFooter();
 
- // set the total invoice price
-  public void setTotalPrice(double totalPrice);
+ // set the total invoice price Redundant?? liam
+  // public void setTotalPrice(double totalPrice);
 
 }
