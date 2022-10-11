@@ -6,7 +6,6 @@ import visitor.ItemVisitor;
 public class Titanium extends ItemDecorator {
 
     final double TITANIUM_PREMIUM = 50;
-    final String TITANIUM_DESCRIPTOR = "titanium";
 
     public Titanium(Item item) {
         super(item);
@@ -22,7 +21,7 @@ public class Titanium extends ItemDecorator {
     }
     @Override
     public String toString() {
-        return TITANIUM_DESCRIPTOR + " " + item.toString();
+        return "titanium " + item.toString();
     }
 
     @Override

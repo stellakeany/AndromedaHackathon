@@ -6,7 +6,6 @@ import visitor.ItemVisitor;
 public class Steel extends ItemDecorator {
 
     final double STEEL_PREMIUM = 10;
-    final String STEEL_DESCRIPTOR = "steel";
 
     public Steel(Item item) {
         super(item);
@@ -23,7 +22,7 @@ public class Steel extends ItemDecorator {
 
     @Override
     public String toString() {
-        return STEEL_DESCRIPTOR + " " +  item.toString();
+        return "steel " +  item.toString();
     }
 
     @Override

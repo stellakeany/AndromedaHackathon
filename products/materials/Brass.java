@@ -6,7 +6,6 @@ import visitor.ItemVisitor;
 public class Brass extends ItemDecorator {
 
     final double BRASS_PREMIUM = 20;
-    final String BRASS_DESCRIPTOR = "brass";
 
     public Brass(Item item) {
         super(item);
@@ -21,7 +20,7 @@ public class Brass extends ItemDecorator {
     }
     @Override
     public String toString() {
-        return BRASS_DESCRIPTOR + " " + item.toString();
+        return "brass " + item.toString();
     }
 
     @Override
